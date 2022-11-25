@@ -2,6 +2,7 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import {
+  Banner,
   Card,
   ResourceList,
   Stack,
@@ -76,6 +77,7 @@ class ResourceListWithProducts extends React.Component {
 			
 			
           return (
+
 		    <Card>
               <ResourceList // Defines your resource list component
                 showHeader
@@ -105,6 +107,17 @@ class ResourceListWithProducts extends React.Component {
                     >
                       <Stack>
                         <Stack.Item fill>
+                        <Banner
+                            title=""
+                            status="warning"
+                            secondaryAction={{
+                              content: "Preview product",
+                              url: 'https://vyontsek-dev-store.myshopify.com/products/'+item.handle,
+                              external: true
+                            }}
+                          >
+                         {item.title}
+                          </Banner>
                           <h3>
                             <TextStyle variation="strong">
                              <Link to={item.handle}>{item.title}</Link>
