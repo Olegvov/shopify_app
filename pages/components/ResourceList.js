@@ -116,13 +116,13 @@ class ResourceListWithProducts extends React.Component {
                               external: true
                             }}
                           >
+                           <h3>
+                          <TextStyle variation="strong">
                          {item.title}
+                          </TextStyle>
+                            </h3>
                           </Banner>
-                          <h3>
-                            <TextStyle variation="strong">
-                             <Link to={item.handle}>{item.title}</Link>
-                            </TextStyle>
-                          </h3>
+                         
                         </Stack.Item>
                         <Stack.Item>
                           <p>${price}</p>
